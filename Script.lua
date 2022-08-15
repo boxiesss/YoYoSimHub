@@ -21,12 +21,10 @@ end)
 w:Toggle("Auto Sell", function(bool)
     l = bool
     while l do
-        wait(1)
-        if char.HumanoidRootPart.CFrame == CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047) then
-            char.HumanoidRootPart.CFrame = CFrame.new(-12.231704711914062, 30.598020553588867, -107.35179901123047)    
-        else    
-            char.HumanoidRootPart.CFrame = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
-        end    
+wait(1)
+            firetouchinterest(game:GetService("Workspace").MapFunctions.Sell.Home.HitBox,game.Players.LocalPlayer.Character.HumanoidRootPart,0)
+wait()
+firetouchinterest(game:GetService("Workspace").MapFunctions.Sell.Home.HitBox,game.Players.LocalPlayer.Character.HumanoidRootPart,1)
     end
 end) 
 
