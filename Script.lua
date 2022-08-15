@@ -29,21 +29,25 @@ firetouchinterest(game:GetService("Workspace").MapFunctions.Sell.Home.HitBox,gam
 end) 
 
 w:Toggle("Auto Collect Gems (OP)", function(bool)
-    l = bool
-    while l do
-        wait(0.01)
-        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
-        local b = a[math.random(1, #a)]
-        local Coords2 = b.Position.CFrame
-        local c = b.Position.Position
-        wait(0.05)
-        if Coords2.X <= 400 then
-            char.HumanoidRootPart.CFrame = Coords2
-            wait(0.99)
-        else
-            print("not in range")
-        end
-    end 
+local TS = game:GetService("TweenService")
+local char = game:GetService("Players").LocalPlayer.Character
+local Info = TweenInfo.new(1.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+l = bool
+while l do
+wait(0.01)
+local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+local b = a[math.random(1, #a)]
+local Coords = b.Position.CFrame
+
+local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+wait(0.05)
+if Coords.X <= 400 then
+Goto:Play()
+wait(1.5)
+else
+    print("not in range")
+end
+end
 end)
 
 local a = library:Tab("Auto Buy Upgrades")
