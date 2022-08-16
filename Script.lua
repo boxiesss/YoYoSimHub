@@ -212,6 +212,8 @@ end)
 a:Toggle("Auto Buy Next Area", function(bool)
     l = bool
     while l do
+    local coins = game:GetService("Players").LocalPlayer.leaderstats.Coins
+local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
     wait(5)
         if bought == 0 then
         if coins.Value >= 500001 then
