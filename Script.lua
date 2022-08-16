@@ -32,11 +32,12 @@ w:Toggle("Auto Sell (failsafe)", function(bool)
         l = bool
     while l do
         wait(1)
-        if char.HumanoidRootPart.CFrame == CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047) then
-            char.HumanoidRootPart.CFrame = CFrame.new(-12.231704711914062, 30.598020553588867, -107.35179901123047)    
+        if char.HumanoidRootPart.CFrame == CFrame.new(-11.2317047, 30.5980206, -107.351799) then
+            char.HumanoidRootPart.CFrame = CFrame.new(-12.231704711914062, 45.598020553588867, -107.35179901123047)    
         else    
             char.HumanoidRootPart.CFrame = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
         end    
+    end
 end)
 w:Label("Auto Sell failsafe is only if you")
 w:Label("Want it to never fail. Less convenient.")
