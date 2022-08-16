@@ -28,6 +28,19 @@ firetouchinterest(game:GetService("Workspace").MapFunctions.Sell.Home.HitBox,gam
     end
 end) 
 
+w:Toggle("Auto Sell (failsafe)", function(bool)
+        l = bool
+    while l do
+        wait(1)
+        if char.HumanoidRootPart.CFrame == CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047) then
+            char.HumanoidRootPart.CFrame = CFrame.new(-12.231704711914062, 30.598020553588867, -107.35179901123047)    
+        else    
+            char.HumanoidRootPart.CFrame = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
+        end    
+end)
+w:Label("Auto Sell failsafe is only if you")
+w:Label("Want it to never fail. Less convenient.")
+w:Label("Useful for overnight farming.")
 w:Toggle("Auto Collect Gems (OP)", function(bool)
 local TS = game:GetService("TweenService")
 local char = game:GetService("Players").LocalPlayer.Character
