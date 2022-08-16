@@ -52,11 +52,13 @@ local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
 if Coords.X <= 400 then
 Goto:Play()
+ye + 1
 wait(1.2)
 else
     print("not in range")
 end
 else
+ye = 0
 Goto2:Play()
 end
 end
