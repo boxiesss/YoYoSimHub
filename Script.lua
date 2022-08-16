@@ -61,6 +61,7 @@ end
 else
 ye = 0
 Goto2:Play()
+wait(1.2)
 end
 else 
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
