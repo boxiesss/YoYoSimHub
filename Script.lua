@@ -4,10 +4,10 @@ local function rebirth()
     bought = 0
 end
 local h = 1
+local fe = false
+local ge = false
 local w = library:Tab("Autofarms for stuff")
 local char = game:GetService("Players").LocalPlayer.Character
-local coins = game:GetService("Players").LocalPlayer.leaderstats.Coins
-local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
 w:Toggle("Auto Yo-Yo", function(bool)
     l = bool
     while l do
@@ -34,10 +34,16 @@ end)
 w:Toggle("Auto Collect Gems (OP)", function(bool)
 local TS = game:GetService("TweenService")
 local char = game:GetService("Players").LocalPlayer.Character
-local Info = TweenInfo.new(1.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+local Info = TweenInfo.new(1.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+local Info2 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
+local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
+local ye = 0
+ge = bool
 l = bool
 while l do
 wait(0.01)
+if ye ~= 3 then
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
 local b = a[math.random(1, #a)]
 local Coords = b.Position.CFrame
@@ -46,14 +52,17 @@ local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
 if Coords.X <= 400 then
 Goto:Play()
-wait(1.1)
+wait(1.2)
 else
     print("not in range")
+end
+else
+Goto2:Play()
 end
 end
 end)
 w:Label("Auto Sell failsafe is only if you")
-w:Label("shouldn't fail. Less convenient.")
+w:Label("dont want to fail. Less convenient.")
 w:Label("Useful for overnight farming.")
 w:Label("Normal Auto-Sell Should work")
 w:Label("It has never failed for me.")
@@ -66,16 +75,24 @@ local Coords3 = CFrame.new(-10.231704711914062, 30.598020553588867, -107.3517990
 local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
 local Goto3 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords3})
         l = bool
+        fe = bool
     while l do
         wait(5)
-        if h == 1 then  
-            Goto2:Play()
-            h = 2
-        else
-            Goto3:Play()
-            h = 1
-        end    
+        if ge == false then
+        
+
+
+            if h == 1 then  
+                Goto2:Play()
+                h = 2
+            else
+                Goto3:Play()
+                h = 1
+            end
+        else 
+        print("gem enable")  
     end
+   end
 end)
 local a = library:Tab("Auto Buy Upgrades")
 a:Toggle("Auto Buy Yo/Yo", function(bool)
@@ -101,6 +118,8 @@ end)
 a:Toggle("Auto Buy Rebirth", function(bool)
     l = bool
     while l do
+        local coins = game:GetService("Players").LocalPlayer.leaderstats.Coins
+local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
         wait(5)
         if rank.Value == "Beginner" then
             if tonumber(coins.Value) >= 500000 then
