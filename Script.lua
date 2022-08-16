@@ -43,6 +43,7 @@ ge = bool
 l = bool
 while l do
 wait(0.01)
+if fe == true then
 if ye ~= 3 then
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
 local b = a[math.random(1, #a)]
@@ -60,6 +61,20 @@ end
 else
 ye = 0
 Goto2:Play()
+end
+else 
+local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+local b = a[math.random(1, #a)]
+local Coords = b.Position.CFrame
+
+local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+wait(0.05)
+if Coords.X <= 400 then
+Goto:Play()
+wait(1.2)
+else
+    print("not in range")
+end
 end
 end
 end)
