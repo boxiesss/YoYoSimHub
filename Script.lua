@@ -218,7 +218,7 @@ a:Toggle("Auto Buy Next Area", function(bool)
 local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
     wait(5)
         if bought == 0 then
-        if coins.Value >= 500001 then
+        if tonumber(coins.Value) >= 500001 then
         local args = {
             [1] = "Candyland",
             [2] = game:GetService("Players").LocalPlayer
@@ -227,7 +227,7 @@ local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
         game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
     end
 elseif bought == 1 then
-    if coins.Value >= 5000001 then
+    if tonumber(coins.Value) >= 5000001 then
     local args = {
         [1] = "Desert",
         [2] = game:GetService("Players").LocalPlayer
@@ -236,7 +236,7 @@ elseif bought == 1 then
     game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
 end
 elseif bought == 2 then
-    if coins.Value >= 20000000 then
+    if tonumber(coins.Value) >= 20000000 then
         local args = {
             [1] = "Magma",
             [2] = game:GetService("Players").LocalPlayer
