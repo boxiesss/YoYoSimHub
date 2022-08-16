@@ -118,11 +118,11 @@ end)
 a:Toggle("Auto Buy Rebirth", function(bool)
     l = bool
     while l do
-        local coins = game:GetService("Players").LocalPlayer.leaderstats.Coins
+        local coins = game:GetService("Players").LocalPlayer.ClientData.Coins
 local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
         wait(5)
         if rank.Value == "Beginner" then
-            if tonumber(coins.Value) >= 500000 then
+            if coins.Value >= "500k" then
 
 local args = {
     [1] = "Newbie",
@@ -212,7 +212,7 @@ end)
 a:Toggle("Auto Buy Next Area", function(bool)
     l = bool
     while l do
-    local coins = game:GetService("Players").LocalPlayer.leaderstats.Coins
+    local coins = game:GetService("Players").LocalPlayer.ClientData.Coins
 local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
     wait(5)
         if bought == 0 then
