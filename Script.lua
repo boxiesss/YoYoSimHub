@@ -61,7 +61,6 @@ end
 else
 ye = 0
 Goto2:Play()
-wait(1.2)
 end
 else 
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
@@ -216,7 +215,7 @@ end
                                         
                                     end
                                 elseif rank.Value == "Skilled" then
-                                    if tonumber(coins.Value) >= 4932843908243294 then
+                                    if tonumber(coins.Value) >= 50000000000 then
                                     local args = {
                                         [1] = "idk",
                                         [2] = game:GetService("Players").LocalPlayer
@@ -241,15 +240,18 @@ local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
         }
         
         game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
+        bought = bought + 1
     end
 elseif bought == 1 then
     if tonumber(coins.Value) >= 5000001 then
-    local args = {
-        [1] = "Desert",
-        [2] = game:GetService("Players").LocalPlayer
-    }
-    
-    game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Desert",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
+bought = bought + 1
 end
 elseif bought == 2 then
     if tonumber(coins.Value) >= 20000000 then
@@ -259,6 +261,7 @@ elseif bought == 2 then
         }
         
         game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
+        bought = bought + 1
     end
 end
 end 
