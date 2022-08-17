@@ -1,6 +1,6 @@
 --[[
-stop looking at my script devs ill jus obfuscate and rerel unpatched
-im in your discord
+I'm top 10 on 2 leaderboards say hi to id0lizer if u see me
+im in the game discord
 ]]--
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lolpoppyus/Roblox-Lua/master/Pop%20UI%20Lib", true))()
 local bought = 0
