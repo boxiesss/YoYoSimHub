@@ -1,3 +1,7 @@
+--[[
+stop looking at my script devs ill jus obfuscate and rerel unpatched
+im in your discord
+]]--
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lolpoppyus/Roblox-Lua/master/Pop%20UI%20Lib", true))()
 local bought = 0
 local function rebirth()
