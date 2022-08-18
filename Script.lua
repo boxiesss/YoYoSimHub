@@ -1,3 +1,8 @@
+--[[
+i play on id0lizer on this game, i'm on leaderboards, say hi if you see me (likely afk though)
+im in their discord so you can tag me there 
+]]--
+
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lolpoppyus/Roblox-Lua/master/Pop%20UI%20Lib", true))()
 local bought = 0
 local function rebirth()
