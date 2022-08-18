@@ -13,8 +13,8 @@ local ge = false
 local w = library:Tab("Autofarms for stuff")
 local char = game:GetService("Players").LocalPlayer.Character
 w:Toggle("Auto Yo-Yo", function(bool)
-    l = bool
-    while l do
+    asd = bool
+    while asd do
         wait(1)
         local args = {
             [1] = "Gold Yo-Yo"
@@ -24,8 +24,8 @@ w:Toggle("Auto Yo-Yo", function(bool)
 end)
 
 w:Toggle("Auto Sell", function(bool)
-    l = bool
-    while l do
+    gfdj = bool
+    while gfdj do
 wait(1)
             firetouchinterest(game:GetService("Workspace").MapFunctions.Sell.Home.HitBox,game.Players.LocalPlayer.Character.HumanoidRootPart,0)
 wait()
@@ -44,8 +44,8 @@ local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.3517990
 local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
 local ye = 0
 ge = bool
-l = bool
-while l do
+eik = bool
+while eik do
 wait(0.01)
 if fe == true then
 if ye ~= 3 then
@@ -83,10 +83,9 @@ end
 end
 end)
 w:Label("Auto Sell failsafe is only if you")
-w:Label("dont want to fail. Less convenient.")
-w:Label("Useful for overnight farming.")
+w:Label("dont want to fail.")
 w:Label("Normal Auto-Sell Should work")
-w:Label("It has never failed for me.")
+w:Label("Only use if normal is bugging.")
 w:Toggle("Auto Sell (failsafe)", function(bool)
        local TS = game:GetService("TweenService")
 local char = game:GetService("Players").LocalPlayer.Character
@@ -95,9 +94,9 @@ local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.3517990
 local Coords3 = CFrame.new(-10.231704711914062, 30.598020553588867, -107.35179901123047)
 local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
 local Goto3 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords3})
-        l = bool
+        las = bool
         fe = bool
-    while l do
+    while las do
         wait(5)
         if ge == false then
         
@@ -117,8 +116,8 @@ local Goto3 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords3})
 end)
 local a = library:Tab("Auto Buy Upgrades")
 a:Toggle("Auto Buy Yo/Yo", function(bool)
-    l = bool
-    while l do
+    jf = bool
+    while jf do
         wait(1)
         local args = {
             [1] = game:GetService("Players").LocalPlayer
@@ -127,8 +126,8 @@ a:Toggle("Auto Buy Yo/Yo", function(bool)
     end
 end)
 a:Toggle("Auto Buy Backpack", function(bool)
-    l = bool
-    while l do
+    y = bool
+    while y do
         wait(1)
         local args = {
             [1] = game:GetService("Players").LocalPlayer
@@ -137,8 +136,8 @@ a:Toggle("Auto Buy Backpack", function(bool)
     end
 end)
 a:Toggle("Auto Buy Rebirth", function(bool)
-    l = bool
-    while l do
+    w = bool
+    while w do
         local coins = game:GetService("Players").LocalPlayer.ClientData.Coins
 local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
         wait(5)
@@ -231,8 +230,8 @@ end
     end
 end)
 a:Toggle("Auto Buy Next Area", function(bool)
-    l = bool
-    while l do
+    z = bool
+    while z do
     local coins = game:GetService("Players").LocalPlayer.ClientData.Coins
 local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
     wait(5)
@@ -274,8 +273,8 @@ a:Label("Auto Buy Next Area is")
 a:Label("Important, Enable it")
 local b = library:Tab("Eggs")
 b:Toggle("Autobuy Rare Egg", function(bool)
-l = bool
-while l do
+x = bool
+while x do
 
     local args = {
     [1] = "Rare Egg",
@@ -288,8 +287,8 @@ end
 end)
 
 b:Toggle("Autobuy Ice Cream Egg", function(bool)
-    l = bool
-while l do
+    s = bool
+while s do
     local args = {
         [1] = "Ice Cream Egg",
         [2] = "SingleEgg",
@@ -301,8 +300,8 @@ end
 end)
 
 b:Toggle("Autobuy Candy Cane Egg", function(bool)
-    l = bool
-while l do  
+    k = bool
+while k do  
 
     local args = {
             [1] = "Candy Cane Egg",
@@ -314,8 +313,8 @@ while l do
     end   
     end)
         b:Toggle("Autobuy Cactus Egg", function(bool)
-            l = bool
-while l do
+            v = bool
+while v do
 
             local args = {
                 [1] = "Cactus Egg",
@@ -327,8 +326,8 @@ while l do
         end    
         end)
             b:Toggle("Autobuy Mummy Egg", function(bool)
-                l = bool
-while l do
+                m = bool
+while m do
     wait(6)   
                 local args = {
                     [1] = "Mummy Egg",
@@ -341,8 +340,8 @@ while l do
 
             end)
                 b:Toggle("Autobuy Lava Rock Egg", function(bool)
-                    l = bool
-while l do
+                    n = bool
+while n do
 
                     local args = {
                         [1] = "Lava Rock Egg",
@@ -355,8 +354,8 @@ while l do
                      
                 end)
                     b:Toggle("Autobuy Volcano Egg", function(bool)
-                        l = bool
-while l do
+                        j = bool
+while j do
               
     local args = {
                             [1] = "Volcano Egg",
@@ -371,8 +370,8 @@ while l do
 local d = library:Tab("Miscellaneous")
 d:Toggle("Auto Claim Daily Rewards", function(bool)
 
-    l = bool
-    while l do
+    f = bool
+    while f do
 local args = {
     [1] = workspace.MapFunctions.Chests:FindFirstChild("Candy Reward"),
     [2] = game:GetService("Players").LocalPlayer
@@ -411,6 +410,54 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").GameEvents.BenefitsEvents.TwitterFunction:InvokeServer(unpack(args))
+end
+end)
+d:Toggle("Auto Claim Quests", function(bool)
+t = bool
+while t do
+wait(5)
+local args = {
+    [1] = "Sell Storage",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").GameEvents.RewardEvents.Quest:FireServer(unpack(args))
+local args = {
+    [1] = "Swing YoYo",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").GameEvents.RewardEvents.Quest:FireServer(unpack(args))
+local args = {
+    [1] = "Hatch Uncommon Pets",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").GameEvents.RewardEvents.Quest:FireServer(unpack(args))
+local args = {
+    [1] = "Hatch Rare Pets",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").GameEvents.RewardEvents.Quest:FireServer(unpack(args))
+local args = {
+    [1] = "Hatch Eggs",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").GameEvents.RewardEvents.Quest:FireServer(unpack(args))
+local args = {
+    [1] = "Pick Up",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").GameEvents.RewardEvents.Quest:FireServer(unpack(args))
+local args = {
+    [1] = "Hatch Common Pets",
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").GameEvents.RewardEvents.Quest:FireServer(unpack(args))
 end
 end)
 local c = library:Tab("Credits")
