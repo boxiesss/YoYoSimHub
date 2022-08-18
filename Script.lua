@@ -34,29 +34,23 @@ end)
 w:Toggle("Auto Collect Gems (OP)", function(bool)
 local TS = game:GetService("TweenService")
 local char = game:GetService("Players").LocalPlayer.Character
-local Info = TweenInfo.new(1.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
-local Info2 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
-local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
-local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
-eik = bool
-while eik do
+local Info = TweenInfo.new(1.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+l = bool
+while l do
 wait(0.01)
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
 local b = a[math.random(1, #a)]
 local Coords = b.Position.CFrame
-
 local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
 if Coords.X <= 400 then
 Goto:Play()
-ye = ye + 1
-wait(1.2)
+wait(1.5)
 else
     print("not in range")
 end
 end
 end)
-
 local a = library:Tab("Auto Buy Upgrades")
 a:Toggle("Auto Buy Yo/Yo", function(bool)
     jf = bool
