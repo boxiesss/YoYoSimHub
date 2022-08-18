@@ -1,7 +1,3 @@
---[[
-I'm top 10 on 2 leaderboards say hi to id0lizer if u see me
-im in the game discord
-]]--
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lolpoppyus/Roblox-Lua/master/Pop%20UI%20Lib", true))()
 local bought = 0
 local function rebirth()
@@ -15,7 +11,7 @@ local char = game:GetService("Players").LocalPlayer.Character
 w:Toggle("Auto Yo-Yo", function(bool)
     asd = bool
     while asd do
-        wait(1)
+        wait(0.25)
         local args = {
             [1] = "Gold Yo-Yo"
         }     
@@ -42,13 +38,9 @@ local Info = TweenInfo.new(1.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out,
 local Info2 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
 local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
 local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
-local ye = 0
-ge = bool
 eik = bool
 while eik do
 wait(0.01)
-if fe == true then
-if ye ~= 3 then
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
 local b = a[math.random(1, #a)]
 local Coords = b.Position.CFrame
@@ -62,58 +54,9 @@ wait(1.2)
 else
     print("not in range")
 end
-else
-ye = 0
-Goto2:Play()
-end
-else 
-local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
-local b = a[math.random(1, #a)]
-local Coords = b.Position.CFrame
-
-local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
-wait(0.05)
-if Coords.X <= 400 then
-Goto:Play()
-wait(1.2)
-else
-    print("not in range")
-end
-end
 end
 end)
-w:Label("Auto Sell failsafe is only if you")
-w:Label("dont want to fail.")
-w:Label("Normal Auto-Sell Should work")
-w:Label("Only use if normal is bugging.")
-w:Toggle("Auto Sell (failsafe)", function(bool)
-       local TS = game:GetService("TweenService")
-local char = game:GetService("Players").LocalPlayer.Character
-local Info = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
-local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
-local Coords3 = CFrame.new(-10.231704711914062, 30.598020553588867, -107.35179901123047)
-local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
-local Goto3 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords3})
-        las = bool
-        fe = bool
-    while las do
-        wait(5)
-        if ge == false then
-        
 
-
-            if h == 1 then  
-                Goto2:Play()
-                h = 2
-            else
-                Goto3:Play()
-                h = 1
-            end
-        else 
-        print("gem enable")  
-    end
-   end
-end)
 local a = library:Tab("Auto Buy Upgrades")
 a:Toggle("Auto Buy Yo/Yo", function(bool)
     jf = bool
@@ -136,8 +79,8 @@ a:Toggle("Auto Buy Backpack", function(bool)
     end
 end)
 a:Toggle("Auto Buy Rebirth", function(bool)
-    w = bool
-    while w do
+    fdsj = bool
+    while fdsj do
         local coins = game:GetService("Players").LocalPlayer.ClientData.Coins
 local rank = game:GetService("Players").LocalPlayer.leaderstats.Rank
         wait(5)
@@ -412,7 +355,7 @@ local args = {
 game:GetService("ReplicatedStorage").GameEvents.BenefitsEvents.TwitterFunction:InvokeServer(unpack(args))
 end
 end)
-d:Toggle("Auto Claim Quests", function(bool)
+d:Toggle("Auto Claim Quests",function(bool)
 t = bool
 while t do
 wait(5)
