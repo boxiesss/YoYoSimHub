@@ -34,28 +34,104 @@ firetouchinterest(game:GetService("Workspace").MapFunctions.Sell.Home.HitBox,gam
     end
 end) 
 
-
+local ch = "Unchosen"
 
 w:Toggle("Auto Collect Gems (OP)", function(bool)
 local TS = game:GetService("TweenService")
 local char = game:GetService("Players").LocalPlayer.Character
-local Info = TweenInfo.new(1.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
-l = bool
-while l do
+local Info = TweenInfo.new(1.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+local Info2 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
+local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
+eik = bool
+while eik do
 wait(0.01)
+if ch == "Home" then
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
 local b = a[math.random(1, #a)]
+if b.Position then
 local Coords = b.Position.CFrame
+
 local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
 if Coords.X <= 400 then
 Goto:Play()
-wait(1.5)
+wait(1.2)
 else
     print("not in range")
 end
+else
+print("Position Value not found!")
+end
+elseif ch == "Home + Candyland" then
+local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+local b = a[math.random(1, #a)]
+if b.Position then
+local Coords = b.Position.CFrame
+
+local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+wait(0.05)
+if Coords.X <= 800 then
+Goto:Play()
+wait(1.2)
+else
+    print("not in range")
+end
+else
+print("Position Value not found!")
+end
+elseif ch == "Home + CL + Desert" then
+local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+local b = a[math.random(1, #a)]
+if b.Position then
+local Coords = b.Position.CFrame
+
+local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+wait(0.05)
+if Coords.X <= 1280 then
+Goto:Play()
+wait(1.2)
+else
+    print("not in range")
+end
+else
+print("Position Value not found!")
+end
+elseif ch == "H + CL + D + Magma" then
+local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+local b = a[math.random(1, #a)]
+if b.Position then
+local Coords = b.Position.CFrame
+
+local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+wait(0.05)
+if Coords.X <= 1880 then
+Goto:Play()
+wait(1.2)
+else
+    print("not in range")
+end
+else
+print("Position Value not found!")
+end
+elseif ch == "Unchosen" then 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Unable to start AutoGemming!";
+    Text = "Please choose the location you want to start the AutoGem on.";
+    Duration = 5;
+    callback = "20";
+    Button1 = "Close";
+})
+wait(5)
+end
 end
 end)
+w:Dropdown("AutoGem Location", {"Home","Home + Candyland", "Home + CL + Desert", "H + CL + D + Magma"}, function(choice)
+    ch = choice
+end)
+w:Label("Only choosen Locations you")
+w:Label("own, it will not pick")
+w:Label("them up otherwise.")
 local a = library:Tab("Auto Buy Upgrades")
 a:Toggle("Auto Buy Yo/Yo", function(bool)
     jf = bool
