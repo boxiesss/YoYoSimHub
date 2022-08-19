@@ -36,7 +36,7 @@ end)
 
 local ch = "Unchosen"
 
-w:Toggle("Auto Collect Gems (OP)", function(bool)
+w:Toggle("Auto Collect Gems", function(bool)
 local TS = game:GetService("TweenService")
 local char = game:GetService("Players").LocalPlayer.Character
 local Info = TweenInfo.new(1.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
@@ -126,7 +126,7 @@ wait(5)
 end
 end
 end)
-w:Dropdown("AutoGem Location", {"Home","Home + Candyland", "Home + CL + Desert", "H + CL + D + Magma"}, function(choice)
+w:Dropdown("Gem Location", {"Home","Home + Candyland", "Home + CL + Desert", "H + CL + D + Magma"}, function(choice)
     ch = choice
 end)
 w:Label("Only choosen Locations you")
