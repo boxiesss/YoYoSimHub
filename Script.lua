@@ -655,6 +655,7 @@ end)
 a:Label("Auto Buy Next Area is")
 a:Label("Important, Enable it")
 local b = library:Tab("Eggs")
+b:Label("Home")
 b:Toggle("AutoHatch Rare Egg", function(bool)
 x = bool
 onn = bool
@@ -674,7 +675,7 @@ wait(1)
                         wait(5)   
 end
 end)
-
+b:Label("Candyland")
 b:Toggle("AutoHatch I. C. Egg", function(bool)
     s = bool
     onn = bool
@@ -714,6 +715,7 @@ while k do
         wait(5)     
     end   
     end)
+    b:Label("Desert")
         b:Toggle("AutoHatch Cactus Egg", function(bool)
             v = bool
             onn = bool
@@ -753,7 +755,8 @@ while m do
         end 
 
             end)
-                b:Toggle("AutoHatch L. R. Egg", function(bool)
+            b:Label("Magma")    
+            b:Toggle("AutoHatch L. R. Egg", function(bool)
                     n = bool
                     onn = bool
 while n do
@@ -792,6 +795,7 @@ while j do
                     end    
                        
                     end)
+                    b:Label("Atlantis")
                     b:Toggle("AutoHatch Neptune Egg", function(bool)
                         deed = bool
                         onn = bool
