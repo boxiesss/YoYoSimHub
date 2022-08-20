@@ -428,7 +428,7 @@ w:Toggle("Auto Collect Gems", function(bool)
     end
     end)
 w:Label("Locations for AutoGem")
-w:Label("Have to own the location to use it.")
+w:Label("Own the location to use it.")
 
 w:Toggle("Home", function(bool)
     ho = bool
