@@ -12,6 +12,12 @@ local onn = false
 local h = 1
 local fe = false
 local ge = false
+local ho = false
+local cand = false
+local des = false
+local mag = false
+local atl = false
+local unch = true
 local w = library:Tab("Autofarms for stuff")
 local char = game:GetService("Players").LocalPlayer.Character
 w:Toggle("Auto Yo-Yo", function(bool)
@@ -38,113 +44,422 @@ end)
 local ch = "Unchosen"
 
 w:Toggle("Auto Collect Gems", function(bool)
-local TS = game:GetService("TweenService")
-local char = game:GetService("Players").LocalPlayer.Character
-local Info = TweenInfo.new(0.9, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
-local Info2 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
-local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
-local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
-eik = bool
-while eik do
-wait(0.01)
-if onn == false then
-if ch == "Home" then
-local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
-local b = a[math.random(1, #a)]
-if b.HitBox then
-local Coords = b.HitBox.CFrame
-
-local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
-wait(0.05)
-if Coords.X <= 400 then
-Goto:Play()
-wait(0.9)
-else
-    print("not in range")
-end
-else
-print("Position Value not found!")
-end
-elseif ch == "Home + Candyland" then
-local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
-local b = a[math.random(1, #a)]
-if b.HitBox then
-local Coords = b.HitBox.CFrame
-
-local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
-wait(0.05)
-if Coords.X <= 800 then
-Goto:Play()
-wait(0.9)
-else
-    print("not in range")
-end
-else
-print("Position Value not found!")
-end
-elseif ch == "Home + CL + Desert" then
-local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
-local b = a[math.random(1, #a)]
-if b.HitBox then
-local Coords = b.HitBox.CFrame
-
-local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
-wait(0.05)
-if Coords.X <= 1280 then
-Goto:Play()
-wait(0.9)
-else
-    print("not in range")
-end
-else
-print("Position Value not found!")
-end
-elseif ch == "H + CL + D + Magma" then
-local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
-local b = a[math.random(1, #a)]
-if b.HitBox then
-local Coords = b.HitBox.CFrame
-
-local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
-wait(0.05)
-if Coords.X <= 1880 then
-Goto:Play()
-wait(0.9)
-else
-    print("not in range")
-end
-else
-print("Position Value not found!")
-end
-elseif ch == "Unchosen" then 
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Unable to start AutoGemming!";
-    Text = "Please choose the location you want to start the AutoGem on.";
-    Duration = 5;
-    callback = "20";
-    Button1 = "Close";
-})
-wait(5)
-end
-else
+    local TS = game:GetService("TweenService")
+    local char = game:GetService("Players").LocalPlayer.Character
+    local Info = TweenInfo.new(0.9, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+    local Info2 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+    local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
+    local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
+    eik = bool
+    while eik do
+    wait(0.01)
+    if onn == false then
+    if ho == true then
+        if cand == true then
+            if des == true then
+                if mag == true then
+                    if atl == true then
+    local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+    local b = a[math.random(1, #a)]
+    if b.HitBox then
+    local Coords = b.HitBox.CFrame
+    
+    local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+    wait(0.05)
+    if Coords.X <= 2200 then
+    Goto:Play()
+    wait(0.9)
+    else
+        print("not in range")
+    end
+    else
+    print("Position Value not found!")
+    end
+    else
+    local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+    local b = a[math.random(1, #a)]
+    if b.HitBox then
+    local Coords = b.HitBox.CFrame
+    
+    local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+    wait(0.05)
+    if Coords.X <= 1800 then
+    Goto:Play()
+    wait(0.9)
+    else
+        print("not in range")
+    end
+    else
+    print("Position Value not found!")
+    end
+    end
+    else
+    local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+    local b = a[math.random(1, #a)]
+    if b.HitBox then
+    local Coords = b.HitBox.CFrame
+    
+    local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+    wait(0.05)
+    if Coords.X <= 1280 then
+    Goto:Play()
+    wait(0.9)
+    else
+        print("not in range")
+    end
+    else
+    print("Position Value not found!")
+    end
+    end
+    else
+    local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+    local b = a[math.random(1, #a)]
+    if b.HitBox then
+    local Coords = b.HitBox.CFrame
+    
+    local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+    wait(0.05)
+    if Coords.X <= 800 then
+    Goto:Play()
+    wait(0.9)
+    else
+        print("not in range")
+    end
+    else
+    print("Position Value not found!")
+    end
+    end
+    else
+        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+        local b = a[math.random(1, #a)]
+        if b.HitBox then
+        local Coords = b.HitBox.CFrame
+        
+        local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+        wait(0.05)
+        if Coords.X <= 400 then
+        Goto:Play()
+        wait(0.9)
+        else
+            print("not in range")
+        end
+        else
+        print("Position Value not found!")
+        end
+    end
+    end
+    if ho == false then
+        if cand == true then
+            if des == true then
+                if mag == true then
+                    if atl == true then
+                        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                        local b = a[math.random(1, #a)]
+                        if b.HitBox then
+                        local Coords = b.HitBox.CFrame
+                        
+                        local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                        wait(0.05)
+                        if Coords.X <= 2200 then
+                            if Coords.X >= 400 then
+                        Goto:Play()
+                        wait(0.9)
+                            else
+                                print("not in range")
+                            end
+                        else
+                            print("not in range")
+                        end
+                        else
+                        print("Position Value not found!")               
+                    end
+                    else
+                        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                        local b = a[math.random(1, #a)]
+                        if b.HitBox then
+                        local Coords = b.HitBox.CFrame
+                        
+                        local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                        wait(0.05)
+                        if Coords.X <= 1800 then
+                            if Coords.X >= 400 then
+                        Goto:Play()
+                        wait(0.9)
+                            else
+                                print("not in range")
+                            end
+                        else
+                            print("not in range")
+                        end
+                        else
+                        print("Position Value not found!")               
+                        end
+                end
+                else
+                    local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                    local b = a[math.random(1, #a)]
+                    if b.HitBox then
+                    local Coords = b.HitBox.CFrame
+                    
+                    local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                    wait(0.05)
+                    if Coords.X <= 1380 then
+                        if Coords.X >= 400 then
+                    Goto:Play()
+                    wait(0.9)
+                        else
+                            print("not in range")
+                        end
+                    else
+                        print("not in range")
+                    end
+                    else
+                    print("Position Value not found!")               
+                    end
+            end
+            else
+                local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                local b = a[math.random(1, #a)]
+                if b.HitBox then
+                local Coords = b.HitBox.CFrame
+                
+                local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                wait(0.05)
+                if Coords.X <= 800 then
+                    if Coords.X >= 400 then
+                Goto:Play()
+                wait(0.9)
+                    else
+                        print("not in range")
+                    end
+                else
+                    print("not in range")
+                end
+                else
+                print("Position Value not found!")               
+            end
+        end
+    end
+    end
+    
+    if ho == false then
+        if cand == false then
+            if des == true then
+                if mag == true then
+                    if atl == true then
+                        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                        local b = a[math.random(1, #a)]
+                        if b.HitBox then
+                        local Coords = b.HitBox.CFrame
+                        
+                        local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                        wait(0.05)
+                        if Coords.X <= 2200 then
+                            if Coords.X >= 800 then
+                        Goto:Play()
+                        wait(0.9)
+                            else
+                                print("not in range")
+                            end
+                        else
+                            print("not in range")
+                        end
+                        else
+                        print("Position Value not found!")               
+                    end
+                    else
+                        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                        local b = a[math.random(1, #a)]
+                        if b.HitBox then
+                        local Coords = b.HitBox.CFrame
+                        
+                        local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                        wait(0.05)
+                        if Coords.X <= 1800 then
+                            if Coords.X >= 800 then
+                        Goto:Play()
+                        wait(0.9)
+                            else
+                                print("not in range")
+                            end
+                        else
+                            print("not in range")
+                        end
+                        else
+                        print("Position Value not found!")               
+                        end
+                end
+                else
+                    local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                    local b = a[math.random(1, #a)]
+                    if b.HitBox then
+                    local Coords = b.HitBox.CFrame
+                    
+                    local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                    wait(0.05)
+                    if Coords.X <= 1380 then
+                        if Coords.X >= 800 then
+                    Goto:Play()
+                    wait(0.9)
+                        else
+                            print("not in range")
+                        end
+                    else
+                        print("not in range")
+                    end
+                    else
+                    print("Position Value not found!")               
+                    end
+            end
+    end
+    end
+    end
+    if ho == false then
+        if cand == false then
+            if des == false then
+                if mag == true then
+                    if atl == true then
+                        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                        local b = a[math.random(1, #a)]
+                        if b.HitBox then
+                        local Coords = b.HitBox.CFrame
+                        
+                        local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                        wait(0.05)
+                        if Coords.X <= 2200 then
+                            if Coords.X >= 1380 then
+                        Goto:Play()
+                        wait(0.9)
+                            else
+                                print("not in range")
+                            end
+                        else
+                            print("not in range")
+                        end
+                        else
+                        print("Position Value not found!")               
+                    end
+                    else
+                        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                        local b = a[math.random(1, #a)]
+                        if b.HitBox then
+                        local Coords = b.HitBox.CFrame
+                        
+                        local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                        wait(0.05)
+                        if Coords.X <= 1800 then
+                            if Coords.X >= 1380 then
+                        Goto:Play()
+                        wait(0.9)
+                            else
+                                print("not in range")
+                            end
+                        else
+                            print("not in range")
+                        end
+                        else
+                        print("Position Value not found!")               
+                        end
+                end
+            end
+            end
+    end
+    end
+    if ho == false then
+        if cand == false then
+            if des == false then
+                if mag == false then
+                    if atl == true then
+                        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                        local b = a[math.random(1, #a)]
+                        if b.HitBox then
+                        local Coords = b.HitBox.CFrame
+                        
+                        local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                        wait(0.05)
+                        if Coords.X <= 2200 then
+                            if Coords.X >= 1800 then
+                        Goto:Play()
+                        wait(0.9)
+                            else
+                                print("not in range")
+                            end
+                        else
+                            print("not in range")
+                        end
+                        else
+                        print("Position Value not found!")               
+                    end
+                end
+            end
+            end
+    end
+    end
+    
+    
+    if ho == false then
+        if mag == false then
+            if cand == false then
+                if des == false then
+                    if atl == false then
     game.StarterGui:SetCore("SendNotification", {
         Title = "Unable to start AutoGemming!";
-        Text = "Please Disable AutoHatch while AutoGemming.";
+        Text = "Please choose the location you want to start the AutoGem on.";
         Duration = 5;
         callback = "20";
         Button1 = "Close";
-    }) 
-    wait(3)
-end
-end
+    })
+    wait(5)
+    end
+    end
+    end
+    end
+    else
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Unable to start AutoGemming!";
+            Text = "Please Disable AutoHatch while AutoGemming.";
+            Duration = 5;
+            callback = "20";
+            Button1 = "Close";
+        }) 
+        wait(3)
+    end
+    end
+    end
+    end)
+w:Label("Locations for AutoGem")
+w:Label("You need to own the location")
+
+w:Toggle("Home", function(bool)
+    ho = bool
+    if ho == true then
+        unch = false
+    end
 end)
-w:Dropdown("Gem Location", {"Home","Home + Candyland", "Home + CL + Desert", "H + CL + D + Magma"}, function(choice)
-    ch = choice
+w:Toggle("Candyland", function(bool)
+    cand = bool
+    if cand == true then
+        unch = false
+    end
 end)
-w:Label("Only choose Locations you")
-w:Label("own, it will not pick")
-w:Label("them up otherwise.")
-w:Label("Last option is unstable.")
+w:Toggle("Desert", function(bool)
+    des = bool
+    if des == true then
+        unch = false
+    end
+end)
+w:Toggle("Magma", function(bool)
+    mag = bool
+    if mag == true then
+        unch = false
+    end
+end)
+w:Toggle("Atlantis", function(bool)
+    atl = bool
+    if atl == true then
+        unch = false
+    end
+end)
 local a = library:Tab("Auto Buy Upgrades")
 a:Toggle("Auto Buy Yo/Yo", function(bool)
     jf = bool
@@ -611,6 +926,38 @@ local args = {
 game:GetService("ReplicatedStorage").GameEvents.RewardEvents.Quest:FireServer(unpack(args))
 end
 end)
+d:Toggle("Anti Void (autogem)", function(bool)
+    joidfs = bool
+    while joidfs do
+    wait(0.05)
+    if char.HumanoidRootPart.CFrame.Y <= 25 then
+        char.HumanoidRootPart.CFrame = CFrame.new(-70.5245361328125, 30.697996139526367, -140.58079528808594)
+    end
+    end
+end)
 local c = library:Tab("Credits")
 c:Label("Scripts made by OP")
 c:Label("UI Library by Poppyus")
+local dev = library:Tab("Dev (DONT RELEASE)")
+
+dev:Toggle("AutoDelete extra pets", function(boolde)
+    jff = boolde
+    while jff do
+        wait(3)
+        for i,v in pairs(game.Workspace.MapFunctions.PlayerPets.id0lizer:GetChildren()) do
+            if v.Name ~= "1660953032.15275643=5]+*" then
+                if v.Name ~= "1660953028.3028753v2Gc&" then
+                    if v.Name ~= "1660951566.994624uA2D$F-" then
+                        if v.PetName ~= "Cthulu" then
+                           local args = {
+                           [1] = ""..v.Name.."",
+                           [2] = game:GetService("Players").LocalPlayer
+                              }
+                             game:GetService("ReplicatedStorage").GameEvents.PetEvents.DeletePet:FireServer(unpack(args))
+                        end
+                    end
+                end
+            end
+        end    
+    end
+end)
