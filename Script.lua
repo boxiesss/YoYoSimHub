@@ -66,7 +66,7 @@ w:Toggle("Auto Collect Gems", function(bool)
     
     local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
     wait(0.05)
-    if Coords.X <= 2200 then
+    if Coords.X <= 2300 then
     Goto:Play()
     wait(0.9)
     else
@@ -160,7 +160,7 @@ w:Toggle("Auto Collect Gems", function(bool)
                         
                         local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
                         wait(0.05)
-                        if Coords.X <= 2200 then
+                        if Coords.X <= 2300 then
                             if Coords.X >= 400 then
                         Goto:Play()
                         wait(0.9)
@@ -254,7 +254,7 @@ w:Toggle("Auto Collect Gems", function(bool)
                         
                         local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
                         wait(0.05)
-                        if Coords.X <= 2200 then
+                        if Coords.X <= 2300 then
                             if Coords.X >= 800 then
                         Goto:Play()
                         wait(0.9)
@@ -326,7 +326,7 @@ w:Toggle("Auto Collect Gems", function(bool)
                         
                         local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
                         wait(0.05)
-                        if Coords.X <= 2200 then
+                        if Coords.X <= 2300 then
                             if Coords.X >= 1380 then
                         Goto:Play()
                         wait(0.9)
@@ -377,7 +377,7 @@ w:Toggle("Auto Collect Gems", function(bool)
                         
                         local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
                         wait(0.05)
-                        if Coords.X <= 2200 then
+                        if Coords.X <= 2300 then
                             if Coords.X >= 1800 then
                         Goto:Play()
                         wait(0.9)
