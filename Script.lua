@@ -414,21 +414,21 @@ w:Toggle("Auto Collect Gems", function(bool)
     end
     end
     end
-    else
-        game.StarterGui:SetCore("SendNotification", {
-            Title = "Unable to start AutoGemming!";
-            Text = "Please Disable AutoHatch while AutoGemming.";
-            Duration = 5;
-            callback = "20";
-            Button1 = "Close";
-        }) 
-        wait(3)
     end
+else
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Unable to start AutoGemming!";
+        Text = "Please Disable AutoHatch while AutoGemming.";
+        Duration = 5;
+        callback = "20";
+        Button1 = "Close";
+    }) 
+    wait(3)
     end
     end
     end)
 w:Label("Locations for AutoGem")
-w:Label("Own the location to use it.")
+w:Label("Have to own the location to use it.")
 
 w:Toggle("Home", function(bool)
     ho = bool
