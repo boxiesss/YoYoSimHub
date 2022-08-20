@@ -141,9 +141,10 @@ end)
 w:Dropdown("Gem Location", {"Home","Home + Candyland", "Home + CL + Desert", "H + CL + D + Magma"}, function(choice)
     ch = choice
 end)
-w:Label("Only choosen Locations you")
+w:Label("Only choose Locations you")
 w:Label("own, it will not pick")
 w:Label("them up otherwise.")
+w:Label("Last option is unstable.")
 local a = library:Tab("Auto Buy Upgrades")
 a:Toggle("Auto Buy Yo/Yo", function(bool)
     jf = bool
