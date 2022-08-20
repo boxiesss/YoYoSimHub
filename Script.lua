@@ -938,26 +938,3 @@ end)
 local c = library:Tab("Credits")
 c:Label("Scripts made by OP")
 c:Label("UI Library by Poppyus")
-local dev = library:Tab("Dev (DONT RELEASE)")
-
-dev:Toggle("AutoDelete extra pets", function(boolde)
-    jff = boolde
-    while jff do
-        wait(3)
-        for i,v in pairs(game.Workspace.MapFunctions.PlayerPets.id0lizer:GetChildren()) do
-            if v.Name ~= "1660953032.15275643=5]+*" then
-                if v.Name ~= "1660953028.3028753v2Gc&" then
-                    if v.Name ~= "1660951566.994624uA2D$F-" then
-                        if v.PetName ~= "Cthulu" then
-                           local args = {
-                           [1] = ""..v.Name.."",
-                           [2] = game:GetService("Players").LocalPlayer
-                              }
-                             game:GetService("ReplicatedStorage").GameEvents.PetEvents.DeletePet:FireServer(unpack(args))
-                        end
-                    end
-                end
-            end
-        end    
-    end
-end)
