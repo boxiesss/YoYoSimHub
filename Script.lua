@@ -40,7 +40,7 @@ local ch = "Unchosen"
 w:Toggle("Auto Collect Gems", function(bool)
 local TS = game:GetService("TweenService")
 local char = game:GetService("Players").LocalPlayer.Character
-local Info = TweenInfo.new(1.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
+local Info = TweenInfo.new(0.9, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
 local Info2 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, false, 0)
 local Coords2 = CFrame.new(-11.231704711914062, 30.598020553588867, -107.35179901123047)
 local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
@@ -58,7 +58,7 @@ local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
 if Coords.X <= 400 then
 Goto:Play()
-wait(1.2)
+wait(0.9)
 else
     print("not in range")
 end
@@ -75,7 +75,7 @@ local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
 if Coords.X <= 800 then
 Goto:Play()
-wait(1.2)
+wait(0.9)
 else
     print("not in range")
 end
@@ -92,7 +92,7 @@ local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
 if Coords.X <= 1280 then
 Goto:Play()
-wait(1.2)
+wait(0.9)
 else
     print("not in range")
 end
@@ -109,7 +109,7 @@ local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
 if Coords.X <= 1880 then
 Goto:Play()
-wait(1.2)
+wait(0.9)
 else
     print("not in range")
 end
@@ -276,9 +276,9 @@ end
                                     game:GetService("ReplicatedStorage").GameEvents.RankEvents.BuyRank:FireServer(unpack(args))
                                 end
                             elseif rank.Value == "Overlord" then
-                                if tonumber(coins.Value) >= 50000000000000 then
+                                if tonumber(coins.Value) >= 1000000000000000 then
                                     local args = {
-                                        [1] = "idk",
+                                        [1] = "Emperor",
                                         [2] = game:GetService("Players").LocalPlayer
                                     }
                                     rebirth()
