@@ -8,6 +8,7 @@ local bought = 0
 local function rebirth()
     bought = 0
 end
+local onn = false
 local h = 1
 local fe = false
 local ge = false
@@ -46,11 +47,12 @@ local Goto2 = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords2})
 eik = bool
 while eik do
 wait(0.01)
+if onn == false then
 if ch == "Home" then
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
 local b = a[math.random(1, #a)]
-if b.Position then
-local Coords = b.Position.CFrame
+if b.HitBox then
+local Coords = b.HitBox.CFrame
 
 local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
@@ -66,8 +68,8 @@ end
 elseif ch == "Home + Candyland" then
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
 local b = a[math.random(1, #a)]
-if b.Position then
-local Coords = b.Position.CFrame
+if b.HitBox then
+local Coords = b.HitBox.CFrame
 
 local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
@@ -83,8 +85,8 @@ end
 elseif ch == "Home + CL + Desert" then
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
 local b = a[math.random(1, #a)]
-if b.Position then
-local Coords = b.Position.CFrame
+if b.HitBox then
+local Coords = b.HitBox.CFrame
 
 local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
@@ -100,8 +102,8 @@ end
 elseif ch == "H + CL + D + Magma" then
 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
 local b = a[math.random(1, #a)]
-if b.Position then
-local Coords = b.Position.CFrame
+if b.HitBox then
+local Coords = b.HitBox.CFrame
 
 local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
 wait(0.05)
@@ -123,6 +125,16 @@ game.StarterGui:SetCore("SendNotification", {
     Button1 = "Close";
 })
 wait(5)
+end
+else
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Unable to start AutoGemming!";
+        Text = "Please Disable AutoHatch while AutoGemming.";
+        Duration = 5;
+        callback = "20";
+        Button1 = "Close";
+    }) 
+    wait(3)
 end
 end
 end)
@@ -238,13 +250,40 @@ end
                                 elseif rank.Value == "Skilled" then
                                     if tonumber(coins.Value) >= 50000000000 then
                                     local args = {
+                                        [1] = "Specialist",
+                                        [2] = game:GetService("Players").LocalPlayer
+                                    }
+                                    rebirth()
+                                    game:GetService("ReplicatedStorage").GameEvents.RankEvents.BuyRank:FireServer(unpack(args))
+                                end
+                            elseif rank.Value == "Specialist" then
+                                if tonumber(coins.Value) >= 1000000000000 then
+                                    local args = {
+                                        [1] = "Master",
+                                        [2] = game:GetService("Players").LocalPlayer
+                                    }
+                                    rebirth()
+                                    game:GetService("ReplicatedStorage").GameEvents.RankEvents.BuyRank:FireServer(unpack(args))
+                                end
+                            elseif rank.Value == "Master" then
+                                if tonumber(coins.Value) >= 25000000000000 then
+                                    local args = {
+                                        [1] = "Overlord",
+                                        [2] = game:GetService("Players").LocalPlayer
+                                    }
+                                    rebirth()
+                                    game:GetService("ReplicatedStorage").GameEvents.RankEvents.BuyRank:FireServer(unpack(args))
+                                end
+                            elseif rank.Value == "Overlord" then
+                                if tonumber(coins.Value) >= 50000000000000 then
+                                    local args = {
                                         [1] = "idk",
                                         [2] = game:GetService("Players").LocalPlayer
                                     }
                                     rebirth()
                                     game:GetService("ReplicatedStorage").GameEvents.RankEvents.BuyRank:FireServer(unpack(args))
                                 end
-        end   
+                            end   
     end
 end)
 a:Toggle("Auto Buy Next Area", function(bool)
@@ -284,107 +323,200 @@ elseif bought == 2 then
         game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
         bought = bought + 1
     end
+elseif bought == 3 then
+    if tonumber(coins.Value) >= 500000000 then 
+        local args = {
+            [1] = "Atlantis",
+            [2] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
+        bought = bought + 1
+    end
 end
 end 
 end)
 a:Label("Auto Buy Next Area is")
 a:Label("Important, Enable it")
 local b = library:Tab("Eggs")
-b:Toggle("Autobuy Rare Egg", function(bool)
+b:Toggle("AutoHatch Rare Egg", function(bool)
 x = bool
+onn = bool
 while x do
-
+    local xd = char.HumanoidRootPart.CFrame
+    wait(0.1)
+    char.HumanoidRootPart.CFrame = CFrame.new(-154.8024139404297, 31.00058937072754, -63.329383850097656)
+    wait(1)
     local args = {
     [1] = "Rare Egg",
     [2] = "SingleEgg",
     [3] = game:GetService("Players").LocalPlayer
 }
 game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
-wait(6)      
+wait(1)
+                        char.HumanoidRootPart.CFrame = xd
+                        wait(5)   
 end
 end)
 
-b:Toggle("Autobuy Ice Cream Egg", function(bool)
+b:Toggle("AutoHatch I. C. Egg", function(bool)
     s = bool
+    onn = bool
 while s do
+    local xd = char.HumanoidRootPart.CFrame
+    wait(0.1)
+    char.HumanoidRootPart.CFrame = CFrame.new(583.912109375, 48.297874450683594, -46.30248260498047)
+    wait(1)
     local args = {
         [1] = "Ice Cream Egg",
         [2] = "SingleEgg",
         [3] = game:GetService("Players").LocalPlayer
     }
     game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
-    wait(6)      
+    wait(1)
+    char.HumanoidRootPart.CFrame = xd
+    wait(5)  
 end    
 end)
 
-b:Toggle("Autobuy Candy Cane Egg", function(bool)
+b:Toggle("AutoHatch C.C. Egg", function(bool)
     k = bool
+    onn = bool
 while k do  
-
+    local xd = char.HumanoidRootPart.CFrame
+    wait(0.1)
+    char.HumanoidRootPart.CFrame = CFrame.new(583.912109375, 48.297874450683594, -46.30248260498047)
+    wait(1)
     local args = {
             [1] = "Candy Cane Egg",
             [2] = "SingleEgg",
             [3] = game:GetService("Players").LocalPlayer
         }
         game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
-        wait(6)      
+        wait(1)
+        char.HumanoidRootPart.CFrame = xd
+        wait(5)     
     end   
     end)
-        b:Toggle("Autobuy Cactus Egg", function(bool)
+        b:Toggle("AutoHatch Cactus Egg", function(bool)
             v = bool
+            onn = bool
 while v do
-
+    local xd = char.HumanoidRootPart.CFrame
+    wait(0.1)
+    char.HumanoidRootPart.CFrame = CFrame.new(1585.403564453125, 48.297874450683594, -46.41617965698242)
+    wait(1)
             local args = {
                 [1] = "Cactus Egg",
                 [2] = "SingleEgg",
                 [3] = game:GetService("Players").LocalPlayer
             }
             game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
-            wait(6)      
+            wait(1)
+            char.HumanoidRootPart.CFrame = xd
+            wait(5)    
         end    
         end)
-            b:Toggle("Autobuy Mummy Egg", function(bool)
+            b:Toggle("AutoHatch Mummy Egg", function(bool)
                 m = bool
+                onn = bool
 while m do
-    wait(6)   
+    local xd = char.HumanoidRootPart.CFrame
+    wait(0.1)
+    char.HumanoidRootPart.CFrame = CFrame.new(1585.403564453125, 48.297874450683594, -46.41617965698242)
+    wait(1) 
                 local args = {
                     [1] = "Mummy Egg",
                     [2] = "SingleEgg",
                     [3] = game:GetService("Players").LocalPlayer
                 }
                 game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
-                wait(6)      
+                wait(1)
+                char.HumanoidRootPart.CFrame = xd
+                wait(5)     
         end 
 
             end)
-                b:Toggle("Autobuy Lava Rock Egg", function(bool)
+                b:Toggle("AutoHatch L. R. Egg", function(bool)
                     n = bool
+                    onn = bool
 while n do
-
+    local xd = char.HumanoidRootPart.CFrame
+    wait(0.1)
+    char.HumanoidRootPart.CFrame = CFrame.new(1585.403564453125, 48.297874450683594, -46.41617965698242)
+    wait(1)
                     local args = {
                         [1] = "Lava Rock Egg",
                         [2] = "SingleEgg",
                         [3] = game:GetService("Players").LocalPlayer
                     }
                     game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
-                    wait(6)      
+                    wait(1)
+                    char.HumanoidRootPart.CFrame = xd
+                    wait(5)    
                 end    
                      
                 end)
-                    b:Toggle("Autobuy Volcano Egg", function(bool)
+                    b:Toggle("AutoHatch Volcano Egg", function(bool)
                         j = bool
+                        onn = bool
 while j do
-              
+    local xd = char.HumanoidRootPart.CFrame
+    wait(0.1)
+    char.HumanoidRootPart.CFrame = CFrame.new(1585.403564453125, 48.297874450683594, -46.41617965698242)      
     local args = {
                             [1] = "Volcano Egg",
                             [2] = "SingleEgg",
                             [3] = game:GetService("Players").LocalPlayer
                         }
                         game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
-                        wait(6)      
+                        wait(1)
+                        char.HumanoidRootPart.CFrame = xd
+                        wait(5)
                     end    
                        
                     end)
+                    b:Toggle("AutoHatch Neptune Egg", function(bool)
+                        deed = bool
+                        onn = bool
+                            while deed do
+                            local xd = char.HumanoidRootPart.CFrame
+                        wait(0.1)
+                        char.HumanoidRootPart.CFrame = CFrame.new(2085.257568359375, 48.6704216003418, -46.35106658935547)
+                        wait(1)
+                        local args = {
+                            [1] = "Neptune Egg",
+                            [2] = "SingleEgg",
+                            [3] = game:GetService("Players").LocalPlayer
+                        }
+                        
+                        game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
+                        wait(1)
+                        char.HumanoidRootPart.CFrame = xd
+                        wait(5)
+                        end
+                        end)
+                    b:Toggle("AutoHatch Cthulu Egg", function(bool)
+                        dee = bool
+                        onn = bool
+                            while dee do
+                            local xd = char.HumanoidRootPart.CFrame
+                        wait(0.1)
+                        char.HumanoidRootPart.CFrame = CFrame.new(2085.257568359375, 48.6704216003418, -46.35106658935547)
+                        wait(1)
+                        local args = {
+                            [1] = "Cthulu Egg",
+                            [2] = "SingleEgg",
+                            [3] = game:GetService("Players").LocalPlayer
+                        }
+                        
+                        game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
+                        wait(1)
+                        char.HumanoidRootPart.CFrame = xd
+                        wait(5)
+                        end
+                        end)
+b:Label("Only Hatch if you own the area.")                        
 local d = library:Tab("Miscellaneous")
 d:Toggle("Auto Claim Daily Rewards", function(bool)
 
