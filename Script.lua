@@ -1277,6 +1277,7 @@ while j do
                                 wait(5)
                                 end
                                 end)
+c:Label("")
                                           
 local d = library:Tab("Miscellaneous")
 d:Toggle("Auto Claim Daily Rewards", function(bool)
