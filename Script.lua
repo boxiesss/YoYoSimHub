@@ -829,15 +829,15 @@ w:Toggle("Magma", function(bool)
         unch = false
     end
 end)
-w:Toggle("Food", function(bool)
-    foodd = bool
-    if foodd == true then
-        unch = false
-    end
-end)
 w:Toggle("Atlantis", function(bool)
     atl = bool
     if atl == true then
+        unch = false
+    end
+end)
+w:Toggle("Food", function(bool)
+    foodd = bool
+    if foodd == true then
         unch = false
     end
 end)
@@ -1277,8 +1277,7 @@ while j do
                                 wait(5)
                                 end
                                 end)
-c:Label("")
-                                          
+                                b:Label("")
 local d = library:Tab("Miscellaneous")
 d:Toggle("Auto Claim Daily Rewards", function(bool)
 
