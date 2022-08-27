@@ -1000,7 +1000,7 @@ end
                             game:GetService("ReplicatedStorage").GameEvents.RankEvents.BuyRank:FireServer(unpack(args))
                         end
                     elseif rank.Value == "Cool" then
-                        if tonumber(coins.Value) >= 75000000000000000 then
+                        if tonumber(coins.Value) >= 150000000000000000 then
                             local args = {
                                 [1] = "Unreal",
                                 [2] = game:GetService("Players").LocalPlayer
