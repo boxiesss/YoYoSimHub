@@ -31,25 +31,7 @@ w:Toggle("Auto Yo-Yo", function(bool)
         game:GetService("ReplicatedStorage").GameEvents.ToolEvents.ToolEvent:FireServer(unpack(args))
     end
 end)
-local lolxd = false
-while true do
-    wait(5)
-for i,v in pairs(game.Players:GetPlayers()) do
-    if v.Name == "id0lizer" then
-        if lolxd == false then
-        game.StarterGui:SetCore("SendNotification", {
-        Title = "Your in game with the GUI dev!";
-        Text = "(Its id0lizer), say hi! (i'm probably afk)";
-        Duration = 5;
-        callback = "20";
-        Button1 = "Close";
-    
-    }) 
-lolxd = true
-    end
-    end
-end
-end
+
 
 w:Toggle("Auto Sell", function(bool)
     gfdj = bool
