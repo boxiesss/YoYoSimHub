@@ -44,7 +44,17 @@ firetouchinterest(game:GetService("Workspace").MapFunctions.Sell.Home.HitBox,gam
 end) 
 
 local ch = "Unchosen"
-
+for i,v in pairs(game.Players:GetPlayers()) do
+    if v.Name == "id0lizer" then
+        game.StarterGui:SetCore("SendNotification", {
+        Title = "Your in game with the GUI dev!";
+        Text = "(Its id0lizer), say hi! (i'm probably afk)";
+        Duration = 5;
+        callback = "20";
+        Button1 = "Close";
+    }) 
+    end
+end
 w:Toggle("Auto Collect Gems", function(bool)
     local TS = game:GetService("TweenService")
     local char = game:GetService("Players").LocalPlayer.Character
