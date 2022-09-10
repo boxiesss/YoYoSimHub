@@ -47,7 +47,17 @@ w:Toggle("Auto Yo-Yo", function(bool)
     end
 end)
 
-
+for i,v in pairs(game.Players:GetPlayers()) do
+    if v.Name == "id0lizer" then
+        game.StarterGui:SetCore("SendNotification", {
+        Title = "Your in game with the GUI dev!";
+        Text = "(Its id0lizer), say hi! (i'm probably afk)";
+        Duration = 5;
+        callback = "20";
+        Button1 = "Close";
+    }) 
+    end
+end
 w:Toggle("Auto Sell", function(bool)
     gfdj = bool
     while gfdj do
