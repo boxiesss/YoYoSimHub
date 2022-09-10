@@ -1324,9 +1324,9 @@ end
                             game:GetService("ReplicatedStorage").GameEvents.RankEvents.BuyRank:FireServer(unpack(args))
                         end
                     elseif rank.Value == "Queen" then
-                        if tonumber(coins.Value) >= 10000000000000000000 then
+                        if tonumber(coins.Value) >= 120000000000000000000 then
                             local args = {
-                                [1] = "",
+                                [1] = "Royal",
                                 [2] = game:GetService("Players").LocalPlayer
                             }
                             rebirth()
