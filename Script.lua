@@ -25,15 +25,14 @@ local char = game:GetService("Players").LocalPlayer.Character
 w:Toggle("OP Auto Yo-Yo + Sell",function(bool)
     dsadsa = bool
     while dsadsa do
-        wait()
-                local args = {
-                    [1] = "Pizza Yo-Yo"
-                }     
-                game:GetService("ReplicatedStorage").GameEvents.ToolEvents.ToolEvent:FireServer(unpack(args))
-                wait()
-        firetouchinterest(game:GetService("Workspace").MapFunctions.Sell.Home.HitBox,game.Players.LocalPlayer.Character.HumanoidRootPart,0)
-        wait()
-        firetouchinterest(game:GetService("Workspace").MapFunctions.Sell.Home.HitBox,game.Players.LocalPlayer.Character.HumanoidRootPart,1)
+        game.StarterGui:SetCore("SendNotification", {
+        Title = "This has been patched!";
+        Text = "Please go back to using normal auto yo-yo and auto sell. This will be removed.";
+        Duration = 5;
+        callback = "20";
+        Button1 = "Close";
+    }) 
+                        wait(5)
             end
 end)
 w:Toggle("Auto Yo-Yo", function(bool)
