@@ -2087,5 +2087,5 @@ d:Toggle("Anti Void (autogem)", function(bool)
     end
 end)
 local c = library:Tab("Credits")
-c:Label("Scripts made by OP")
+c:Label("Scripts made by OP/id0lizer")
 c:Label("UI Library by Poppyus")
