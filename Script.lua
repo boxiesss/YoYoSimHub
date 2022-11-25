@@ -21,6 +21,7 @@ local des = false
 local mag = false
 local toyy = false
 local atl = false
+local wi = false
 local unch = true
 local w = library:Tab("Autofarms for stuff")
 local char = game:GetService("Players").LocalPlayer.Character
@@ -69,6 +70,36 @@ w:Toggle("Auto Collect Gems", function(bool)
                             if toyy == true then
                                 if magi == true then
                                     if ni == true then
+                                        if wi == true then
+                                            local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                                            local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                                            local b = a[math.random(1, #a)]
+                                        if b.HitBox ~= nil then
+                                                local Coords = b.HitBox.CFrame
+                                                for i,v in pairs(rije) do
+                                            
+                                            local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                                            if Coords.X <= 4800 then
+                                 
+                                                    if last ~= Coords then
+                                                    if b.HitBox.MeshId == v then
+                                                        Goto:Play()
+                                                    last = Coords
+                                            wait(0.76)
+                                                    else
+                                                        print("not a gem")
+                                                    end
+                                                    else
+                                                        print("same coords")
+                                                    end
+                                            else
+                                                print("not in range")
+                                            end
+                                        end
+                                            else
+                                            print("Position Value not found!")               
+                                        end
+                                    else
                                         local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                                         local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
                                         local b = a[math.random(1, #a)]
@@ -95,6 +126,7 @@ w:Toggle("Auto Collect Gems", function(bool)
                                     end
                                         else
                                         print("Position Value not found!")               
+                                    end
                                     end
                                 else
                                     local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
@@ -338,6 +370,39 @@ w:Toggle("Auto Collect Gems", function(bool)
                             if toyy == true then
                                 if magi == true then
                                     if ni == true then
+                                        if wi == true then
+                                            local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                                            local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                                            local b = a[math.random(1, #a)]
+                                        if b.HitBox ~= nil then
+                                                local Coords = b.HitBox.CFrame
+                                                for i,v in pairs(rije) do
+                                            
+                                            local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                                            if Coords.X <= 4800 then
+                                                if Coords.X >= 400 then
+                                                    if last ~= Coords then
+                                                    if b.HitBox.MeshId == v then
+                                                        Goto:Play()
+                                                    last = Coords
+                                            wait(0.76)
+                                                    else
+                                                        print("not a gem")
+                                                    end
+                                                    else
+                                                        print("same coords")
+                                                    end
+                                                else
+                                                    print("not in range")
+                                                end
+                                            else
+                                                print("not in range")
+                                            end
+                                        end
+                                            else
+                                            print("Position Value not found!")               
+                                        end
+                                    else
                                         local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                                         local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
                                         local b = a[math.random(1, #a)]
@@ -369,6 +434,7 @@ w:Toggle("Auto Collect Gems", function(bool)
                                         else
                                         print("Position Value not found!")               
                                     end
+                                end
                                 else
                                     local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                                     local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
@@ -612,6 +678,39 @@ w:Toggle("Auto Collect Gems", function(bool)
                             if toyy == true then
                                 if magi == true then
                                     if ni == true then
+                                        if wi == true then
+                                            local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                                            local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                                            local b = a[math.random(1, #a)]
+                                        if b.HitBox ~= nil then
+                                                local Coords = b.HitBox.CFrame
+                                                for i,v in pairs(rije) do
+                                            
+                                            local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                                            if Coords.X <= 4800 then
+                                                if Coords.X >= 800 then
+                                                    if last ~= Coords then
+                                                    if b.HitBox.MeshId == v then
+                                                        Goto:Play()
+                                                    last = Coords
+                                            wait(0.76)
+                                                    else
+                                                        print("not a gem")
+                                                    end
+                                                    else
+                                                        print("same coords")
+                                                    end
+                                                else
+                                                    print("not in range")
+                                                end
+                                            else
+                                                print("not in range")
+                                            end
+                                        end
+                                            else
+                                            print("Position Value not found!")               
+                                        end
+                                    else
                                         local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                                         local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
                                         local b = a[math.random(1, #a)]
@@ -643,6 +742,7 @@ w:Toggle("Auto Collect Gems", function(bool)
                                         else
                                         print("Position Value not found!")               
                                     end
+                                end
                                 else
                                     local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                                     local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
@@ -853,6 +953,39 @@ w:Toggle("Auto Collect Gems", function(bool)
                             if toyy == true then
                                 if magi == true then
                                     if ni == true then
+                                        if wi == true then
+                                            local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                                            local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                                            local b = a[math.random(1, #a)]
+                                        if b.HitBox ~= nil then
+                                                local Coords = b.HitBox.CFrame
+                                                for i,v in pairs(rije) do
+                                            
+                                            local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                                            if Coords.X <= 4800 then
+                                                if Coords.X >= 1380 then
+                                                    if last ~= Coords then
+                                                    if b.HitBox.MeshId == v then
+                                                        Goto:Play()
+                                                    last = Coords
+                                            wait(0.76)
+                                                    else
+                                                        print("not a gem")
+                                                    end
+                                                    else
+                                                        print("same coords")
+                                                    end
+                                                else
+                                                    print("not in range")
+                                                end
+                                            else
+                                                print("not in range")
+                                            end
+                                        end
+                                            else
+                                            print("Position Value not found!")               
+                                        end
+                                    else
                                         local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                                         local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
                                         local b = a[math.random(1, #a)]
@@ -884,6 +1017,7 @@ w:Toggle("Auto Collect Gems", function(bool)
                                         else
                                         print("Position Value not found!")               
                                     end
+                                end
                                 else
                                     local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                                     local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
@@ -1062,6 +1196,39 @@ w:Toggle("Auto Collect Gems", function(bool)
                             if toyy == true then
                                 if magi == true then
                                     if ni == true then
+                                        if wi == true then
+                                            local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                                            local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                                            local b = a[math.random(1, #a)]
+                                        if b.HitBox ~= nil then
+                                                local Coords = b.HitBox.CFrame
+                                                for i,v in pairs(rije) do
+                                            
+                                            local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                                            if Coords.X <= 4800 then
+                                                if Coords.X >= 1900 then
+                                                    if last ~= Coords then
+                                                    if b.HitBox.MeshId == v then
+                                                        Goto:Play()
+                                                    last = Coords
+                                            wait(0.76)
+                                                    else
+                                                        print("not a gem")
+                                                    end
+                                                    else
+                                                        print("same coords")
+                                                    end
+                                                else
+                                                    print("not in range")
+                                                end
+                                            else
+                                                print("not in range")
+                                            end
+                                        end
+                                            else
+                                            print("Position Value not found!")               
+                                        end
+                                    else
                                         local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                                         local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
                                         local b = a[math.random(1, #a)]
@@ -1093,6 +1260,7 @@ w:Toggle("Auto Collect Gems", function(bool)
                                         else
                                         print("Position Value not found!")               
                                     end
+                                end
                                 else
                                         local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                                         local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
@@ -1239,6 +1407,39 @@ end
         if toyy == true then
             if magi == true then
                 if ni == true then
+                    if wi == true then
+                        local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                        local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                        local b = a[math.random(1, #a)]
+                    if b.HitBox ~= nil then
+                            local Coords = b.HitBox.CFrame
+                            for i,v in pairs(rije) do
+                        
+                        local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                        if Coords.X <= 4800 then
+                            if Coords.X >= 2400 then
+                                if last ~= Coords then
+                                if b.HitBox.MeshId == v then
+                                    Goto:Play()
+                                last = Coords
+                        wait(0.76)
+                                else
+                                    print("not a gem")
+                                end
+                                else
+                                    print("same coords")
+                                end
+                            else
+                                print("not in range")
+                            end
+                        else
+                            print("not in range")
+                        end
+                    end
+                        else
+                        print("Position Value not found!")               
+                    end
+                else
                 local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
                 local b = a[math.random(1, #a)]
@@ -1270,6 +1471,7 @@ end
                 else
                 print("Position Value not found!")               
             end
+        end
         else
                 local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
@@ -1385,6 +1587,39 @@ if foodd == false then
     if toyy == true then
         if magi == true then
             if ni == true then
+                if wi == true then
+                    local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                    local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                    local b = a[math.random(1, #a)]
+                if b.HitBox ~= nil then
+                        local Coords = b.HitBox.CFrame
+                        for i,v in pairs(rije) do
+                    
+                    local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                    if Coords.X <= 4800 then
+                        if Coords.X >= 2980 then
+                            if last ~= Coords then
+                            if b.HitBox.MeshId == v then
+                                Goto:Play()
+                            last = Coords
+                    wait(0.76)
+                            else
+                                print("not a gem")
+                            end
+                            else
+                                print("same coords")
+                            end
+                        else
+                            print("not in range")
+                        end
+                    else
+                        print("not in range")
+                    end
+                end
+                    else
+                    print("Position Value not found!")               
+                end
+            else
                 local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
                 local b = a[math.random(1, #a)]
@@ -1416,6 +1651,7 @@ if foodd == false then
                 else
                 print("Position Value not found!")               
             end
+        end
         else
         local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
         local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
@@ -1497,6 +1733,39 @@ if foodd == false then
     if toyy == false then
         if magi == true then
             if ni == true then
+                if wi == true then
+                    local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                    local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                    local b = a[math.random(1, #a)]
+                if b.HitBox ~= nil then
+                        local Coords = b.HitBox.CFrame
+                        for i,v in pairs(rije) do
+                    
+                    local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                    if Coords.X <= 4800 then
+                        if Coords.X >= 3380 then
+                            if last ~= Coords then
+                            if b.HitBox.MeshId == v then
+                                Goto:Play()
+                            last = Coords
+                    wait(0.76)
+                            else
+                                print("not a gem")
+                            end
+                            else
+                                print("same coords")
+                            end
+                        else
+                            print("not in range")
+                        end
+                    else
+                        print("not in range")
+                    end
+                end
+                    else
+                    print("Position Value not found!")               
+                end
+            else
                 local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
                 local b = a[math.random(1, #a)]
@@ -1528,6 +1797,7 @@ if foodd == false then
                 else
                 print("Position Value not found!")               
             end
+        end
         else
         local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
         local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
@@ -1569,6 +1839,7 @@ end
 end
 end
 end
+end
 if ho == false then
     if mag == false then
         if cand == false then
@@ -1578,6 +1849,39 @@ if foodd == false then
     if toyy == false then
         if magi == false then
             if ni == true then
+                if wi == true then
+                local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                local b = a[math.random(1, #a)]
+            if b.HitBox ~= nil then
+                    local Coords = b.HitBox.CFrame
+                    for i,v in pairs(rije) do
+                
+                local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                if Coords.X <= 4800 then
+                    if Coords.X >= 3800 then
+                        if last ~= Coords then
+                        if b.HitBox.MeshId == v then
+                            Goto:Play()
+                        last = Coords
+                wait(0.76)
+                        else
+                            print("not a gem")
+                        end
+                        else
+                            print("same coords")
+                        end
+                    else
+                        print("not in range")
+                    end
+                else
+                    print("not in range")
+                end
+            end
+                else
+                print("Position Value not found!")               
+            end
+        else
                 local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
                 local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
                 local b = a[math.random(1, #a)]
@@ -1618,6 +1922,57 @@ end
 end
 end
 end
+if ho == false then
+    if mag == false then
+        if cand == false then
+            if des == false then
+                if atl == false then
+if foodd == false then
+    if toyy == false then
+        if magi == false then
+            if ni == false then
+                if wi == true then
+                local rije = {"rbxassetid://10032132916","rbxassetid://10042168486","rbxassetid://10032144283","rbxassetid://10032127463"}
+                local a = game.Workspace.MapFunctions.Spawns.Storage:GetChildren()
+                local b = a[math.random(1, #a)]
+            if b.HitBox ~= nil then
+                    local Coords = b.HitBox.CFrame
+                    for i,v in pairs(rije) do
+                
+                local Goto = TS:Create(char.HumanoidRootPart, Info, {CFrame = Coords})
+                if Coords.X <= 4800 then
+                    if Coords.X >= 4300 then
+                        if last ~= Coords then
+                        if b.HitBox.MeshId == v then
+                            Goto:Play()
+                        last = Coords
+                wait(0.76)
+                        else
+                            print("not a gem")
+                        end
+                        else
+                            print("same coords")
+                        end
+                    else
+                        print("not in range")
+                    end
+                else
+                    print("not in range")
+                end
+            end
+                else
+                print("Position Value not found!")               
+            end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
     if ho == false then
         if mag == false then
             if cand == false then
@@ -1627,6 +1982,7 @@ end
                             if toyy == false then
                                 if magi == false then
                                     if ni == false then
+                                        if wi == false then
     game.StarterGui:SetCore("SendNotification", {
         Title = "Unable to start AutoGemming!";
         Text = "Please choose the location you want to start the AutoGem on.";
@@ -1636,6 +1992,7 @@ end
     })
     wait(5)
     end
+end
 end
     end
 end
@@ -1710,6 +2067,12 @@ end)
 w:Toggle("Ninja", function(bool)
     ni = bool
     if ni == true then
+        unch = false
+    end
+end)
+w:Toggle("Winter", function(bool)
+    wi = bool
+    if wi == true then
         unch = false
     end
 end)
@@ -2069,6 +2432,16 @@ elseif bought == 7 then
         game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
         bought = bought + 1
     end
+elseif bought == 8 then
+    if tonumber(coins.Value) >= 50000000000000000000 then 
+        local args = {
+            [1] = "Winter",
+            [2] = game:GetService("Players").LocalPlayer
+        }
+        
+        game:GetService("ReplicatedStorage").GameEvents.PortalFunction:InvokeServer(unpack(args))
+        bought = bought + 1
+    end
 end
 end 
 end)
@@ -2175,48 +2548,6 @@ while m do
         end 
 
             end)
-
-                        b:Label("Food")
-                        b:Toggle("AutoHatch W.Melon Egg", function(bool)
-                            fyds = bool
-                            onn = fyds
-                                while dee do
-                                local xd = char.HumanoidRootPart.CFrame
-                            wait(0.1)
-                            char.HumanoidRootPart.CFrame = CFrame.new(2585.24072265625, 48.670413970947266, -47.694332122802734)
-                            wait(1)
-                            local args = {
-                                [1] = "Watermelon Egg",
-                                [2] = "SingleEgg",
-                                [3] = game:GetService("Players").LocalPlayer
-                            }
-                            
-                            game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
-                            wait(1)
-                            char.HumanoidRootPart.CFrame = xd
-                            wait(5)
-                            end
-                            end)
-                            b:Toggle("AutoHatch Burger Egg", function(bool)
-                                dsa = bool
-                                onn = bool
-                                    while dsa do
-                                    local xd = char.HumanoidRootPart.CFrame
-                                wait(0.1)
-                                char.HumanoidRootPart.CFrame = CFrame.new(2585.24072265625, 48.670413970947266, -47.694332122802734)
-                                wait(1)
-                                local args = {
-                                    [1] = "Burger Egg",
-                                    [2] = "SingleEgg",
-                                    [3] = game:GetService("Players").LocalPlayer
-                                }
-                                
-                                game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
-                                wait(1)
-                                char.HumanoidRootPart.CFrame = xd
-                                wait(5)
-                                end
-                                end)
                                 b:Label("Toyland")
                                 b:Toggle("AutoHatch 8-Bit Egg", function(bool)
                                     dsa = bool
@@ -2340,6 +2671,47 @@ while m do
                                                         wait(5)
                                                         end
                                                         end)
+                                                        b:Label("Winter")
+                                                        b:Toggle("AutoHatch Snowball Egg", function(bool)
+                                                            dsa = bool
+                                                            onn = bool
+                                                                while dsa do
+                                                                local xd = char.HumanoidRootPart.CFrame
+                                                            wait(0.1)
+                                                            char.HumanoidRootPart.CFrame = CFrame.new(4583.7080078125, 48.670413970947266, -41.430999755859375)
+                                                            wait(1)
+                                                            local args = {
+                                                                [1] = "Snowball Egg",
+                                                                [2] = "SingleEgg",
+                                                                [3] = game:GetService("Players").LocalPlayer
+                                                            }
+                                                            
+                                                            game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
+                                                            wait(1)
+                                                            char.HumanoidRootPart.CFrame = xd
+                                                            wait(5)
+                                                            end
+                                                            end)
+                                                            b:Toggle("AutoHatch Ice Shard Egg", function(bool)
+                                                                dsa = bool
+                                                                onn = bool
+                                                                    while dsa do
+                                                                    local xd = char.HumanoidRootPart.CFrame
+                                                                wait(0.1)
+                                                                char.HumanoidRootPart.CFrame = CFrame.new(4583.7080078125, 48.670413970947266, -41.430999755859375)
+                                                                wait(1)
+                                                                local args = {
+                                                                    [1] = "Ice Shard Egg",
+                                                                    [2] = "SingleEgg",
+                                                                    [3] = game:GetService("Players").LocalPlayer
+                                                                }
+                                                                
+                                                                game:GetService("ReplicatedStorage").GameEvents.EggEvent:FireServer(unpack(args))
+                                                                wait(1)
+                                                                char.HumanoidRootPart.CFrame = xd
+                                                                wait(5)
+                                                                end
+                                                                end)
                                 b:Label("")
 local d = library:Tab("Miscellaneous")
 d:Toggle("Auto Claim Daily Rewards", function(bool)
@@ -2397,6 +2769,12 @@ local args = {
 game:GetService("ReplicatedStorage").GameEvents.DailyReward:FireServer(unpack(args))
 local args = {
     [1] = workspace.MapFunctions.Chests:FindFirstChild("Ninja Reward"),
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").GameEvents.DailyReward:FireServer(unpack(args))
+local args = {
+    [1] = workspace.MapFunctions.Chests:FindFirstChild("Winter Reward"),
     [2] = game:GetService("Players").LocalPlayer
 }
 
